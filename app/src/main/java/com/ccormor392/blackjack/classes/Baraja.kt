@@ -1,8 +1,7 @@
 package com.ccormor392.blackjack.classes
 
-import androidx.compose.runtime.rememberCoroutineScope
 
-class Baraja() {
+class Baraja {
     companion object{
         var listaBaraja = arrayListOf<Carta>()
         init {
@@ -18,13 +17,16 @@ class Baraja() {
             }
             barajar()
         }
-        fun barajar(){
+        private fun barajar(){
             listaBaraja.shuffle()
         }
-        fun dameCarta():Carta{
-            val ultimo = listaBaraja.last()
-            listaBaraja.remove(ultimo)
-            return ultimo
+        fun dameCarta():Carta?{
+            if (listaBaraja.size > 0) {
+                val ultimo = listaBaraja.last()
+                listaBaraja.remove(ultimo)
+                return ultimo
+            }
+            return null
         }
     }
 }

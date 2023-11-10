@@ -1,8 +1,8 @@
 package com.ccormor392.blackjack.classes
 
-class Carta(var palo: Palo, var nombre: Naipe) {
-    var puntosMin:Int
-    var puntosMax:Int
+class Carta(palo: Palo,nombre: Naipe) {
+    private var puntosMin:Int
+    private var puntosMax:Int
     var idDrawable:Int
     init {
         if (nombre.valor == 1){
