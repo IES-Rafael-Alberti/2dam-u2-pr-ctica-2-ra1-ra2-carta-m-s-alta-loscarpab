@@ -1,5 +1,8 @@
 package com.ccormor392.blackjack.classes
 
+/**
+ * El nombre que puede tener el valor de una carta, en este caso, el de una baraja francesa
+ */
 enum class Naipe(val valor: Int) {
     AS(1),
     DOS(2),
